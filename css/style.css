@@ -1,0 +1,1070 @@
+/* fonts */
+@font-face { 
+/* სქელი ერთ ხაზზე */
+    font-family: 'pirveli';
+    src: url('../fonts/alk-rounded-mtav-med-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/alk-rounded-mtav-med-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/alk-rounded-mtav-med-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/alk-rounded-mtav-med-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/alk-rounded-mtav-med-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/alk-rounded-mtav-med-webfont.svg#alk_rounded_mtav_medregular') format('svg'); /* Legacy iOS */
+}
+@font-face {
+/* საშუალო ერთ ხაზზე */
+    font-family: 'meore';
+    src: url('../fonts/bpg-arial-caps-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/bpg-arial-caps-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/bpg-arial-caps-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/bpg-arial-caps-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/bpg-arial-caps-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/bpg-arial-caps-webfont.svg#bpg_arial_capsregular') format('svg'); /* Legacy iOS */
+}
+@font-face {
+/* ლამაზი ერთ ხაზზე */
+    font-family: 'mesame';
+    src: url('../fonts/alk-life-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/alk-life-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/alk-life-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/alk-life-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/alk-life-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/alk-life-webfont.svg#alk_liferegular') format('svg'); /* Legacy iOS */
+}
+ /* fonts end */
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ html{
+     scroll-behavior: smooth;
+ }
+img{
+    vertical-align: middle;
+}
+.ml{ /* my link */
+    cursor: pointer;
+}
+.load{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0; 
+    background-color: white ;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.load i{
+    font-size: 4em;
+    color: rgb(116, 190, 3);
+}
+ /* .top{
+     position: fixed;
+     right: 10px;
+     bottom: 10px;
+     z-index: 99;
+     font-size: 60px;
+     color: rgb(26, 190, 26);
+     transition: .4s;
+     display: none;
+ }
+ .top:hover{
+    color: rgb(26, 190, 26, 0.95);
+ } */
+ .social{
+     position: fixed;
+     top: 30%;
+     left: 0;
+     z-index: 998;
+     background-color: white;
+     width: 45px;
+     padding: 15px 5px;
+     /* border-right: 3px solid green; */
+     border-radius: 0 6px 6px 0;
+ }
+ .social a{
+     position: relative;
+     display: block;
+     font-size: 30px;
+     text-align: center;
+     text-decoration: none;
+ }
+ .social a:not(:nth-child(1)){
+     margin-top: 15px;
+ }
+ .social a:nth-child(1){
+     color: #3b5998;
+ }
+ .social a:nth-child(2){
+    color: #cd201f;
+}
+.social a:nth-child(3){
+    color: #ff8000;
+}
+.insoc{
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    top: 0;
+    right: -130px;
+    color:white;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: cursive;
+    border-radius: 55px;
+    display: none;
+    transition: .4s;
+}
+@media(min-width:768px){
+    .social a:hover .insoc{
+        display: block;
+    }
+}
+@media(max-width:768px){
+    .social{
+        display: none;
+        top: 20%;
+    }
+}
+.bg-f{
+    background-color: #3b5998;
+}
+.bg-y{
+    background-color: #cd201f;
+}
+.bg-b{
+    background-color: #ff8000;
+}
+ header{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     background: url(../imges/cixe.jpg) no-repeat center center;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: white;
+ }
+
+      /* start nav ბარი */
+ nav{
+     overflow: hidden;
+     z-index: 9999;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 10px 70px;
+     display: flex;
+     justify-content: space-between;
+     background-color: #668cd293;  
+     /* background-color: #668cd2; */
+ }
+ .logo_hamb{
+     cursor: pointer;
+     text-decoration: none;
+     color: #fff;
+     display: flex;
+     justify-content: space-between;
+     flex: 100%;
+     -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
+ }
+ .logo{ 
+     display: flex;
+     text-decoration: none;
+     -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
+ }
+ .logo img{
+    width: 40px;
+    height: 40px;
+ }
+ .logo span{
+     font-size: 30px;
+     font-family: 'mesame';
+     font-weight: bold;
+     line-height: 40px;  
+ }
+ .logo span::first-letter{
+  color: orangered;
+  font-size: 32px;
+ }
+ .hamb{
+     display: none;
+ }
+ .hamb i{
+     font-size: 30px;
+     line-height: 40px;
+ }
+ .hamb .fa-times{
+     font-size: 34px;
+    display: none;
+}
+ .menu{
+     display: flex;  
+     list-style: none; 
+ }
+ .menu li{
+     white-space: nowrap;
+ }
+ nav ul li a{
+   cursor: pointer;
+   text-decoration: none;
+   color: white;
+   font-family: 'meore';
+   font-weight: bold;
+   font-size: 16px;
+   margin-left: 15px;
+   line-height: 40px;
+   letter-spacing: 1px;
+   transition: .4s;
+ }
+nav ul li a:hover:not(.active){
+   color: rgb(187, 255, 0);
+ }
+ .active{
+     color: rgb(113, 248, 2);
+ }
+ .es{
+     position: absolute;
+     bottom: 5px;
+     left: 5px; 
+     font-family: mesame;
+     font-weight: bold;
+     font-size: 130%;
+     text-shadow: 2px 2px black;
+     color: orange;
+ }
+ .htxt{
+     width:600px;
+     /* transform: scale(0); */
+ }
+ 
+ .htxt h1{
+     font-size: 40px;
+     font-family: 'pirveli';
+     margin-bottom: 8px;
+ }
+ 
+ .htxt div{
+     font-family: 'mesame';
+     font-weight: bold;
+     font-size: 18px;
+     margin-bottom: 20px;
+ }
+ .btn{
+     font-size: 20px;
+     text-decoration: none;
+     color:white;
+     font-family: 'meore';
+     font-weight: bold;
+     border: 2px solid #14bf98;
+     background-color: #14bf98;
+     padding: 10px 20px;
+     border-radius: 4px;
+     letter-spacing: 1px;
+ }
+ .btn:hover{
+     color:  #01fdc2;
+     background-color: transparent;
+ }
+@media(max-width:1000px){
+    nav{
+        padding: 10px 20px 10px 17px;
+     }
+}
+
+ @media(max-width:866px){
+     .anhtxt{
+         -webkit-animation-duration: .4s;
+                 animation-duration: .4s;
+     }
+     .top{
+        right: 4px;
+        bottom: 4px;
+        color: white;
+        background-color: rgb(11, 180, 61);
+        border-radius: 50%;
+     }
+     .top:hover{
+        color: white;
+     }
+     nav{
+         flex-direction: column;
+     }
+     .hamb{
+         display: block;
+     }
+     .menu{
+         flex-direction: column;
+         display: none;
+     }
+ }
+ @media(max-width:350px){
+    nav{
+        padding: 10px 13px 10px 10px;
+     }
+}
+               /* end nav ბარი */
+
+
+        /* start  მიმოხილვა */
+#informacia{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background: url(../img/balaxi.jpg) no-repeat center center;
+    background-size: cover;
+}
+.infowarw{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    /* transform: translateX(-50%); */
+    font-size: 21px;
+    font-family: "pirveli"; 
+    font-weight: bold;
+    color: #fff;
+}
+#informacia .cont{
+    position: relative;
+    cursor: pointer;
+    padding: 25px 15px;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: rgb(255, 249, 170);
+    box-shadow: 2px 2px 2px rgb(7, 0, 0);
+  }
+  
+  #informacia .conttxt{
+     height: 100%;
+     font-size: 18px;
+     font-family: "mesame";
+     font-weight: bold;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+  }
+  .mimbtn{ /* mimoxilvis btn */
+    position: absolute;
+    bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'pirveli';
+    /* font-weight: bold; */
+    padding: 5px 20px 4px;
+    border-radius: 4px;
+    /* background-color: rgb(28, 175, 15);
+    color: white; */
+    background: transparent;
+    color:  rgb(28, 175, 15);
+    border: 2px solid  rgb(28, 175, 15);
+    transition: all .4s; 
+  }
+ 
+.mimbtn:hover{
+    background-color: rgb(28, 175, 15);
+    color: white;
+}
+  #informacia .incont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgb(28, 175, 15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+    /* transform: translateY(-100%); */
+  }
+ 
+  #informacia .incont i{
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  #informacia .incont h3{
+    margin-top: 3px;
+    color: #fff;
+    font-family: "meore"; 
+    font-weight: bold;
+}
+
+
+  #informacia .cont:hover .incont{
+    transform: translateY(-100%);
+  }
+  /* @media(min-width: 1050px){
+    .bg-info-ors{
+        background-color: rgb(73, 144, 15) !important;
+    }
+  }
+   */
+  @media(max-width:1050px){
+    #informacia{
+      grid-template-columns: 1fr 1fr;
+      padding: 25px 0;
+    }
+    #informacia .cont{
+      margin-top: 15px;
+    }
+  }
+  @media(max-width:750px){
+    #informacia{
+      grid-template-columns: 1fr ;
+    }
+  }
+  @media(max-width:320px){
+    #informacia .cont{
+        margin: 10px 10px;
+      }
+  }
+  /* end  მიმოხილვა */
+  
+       /* start  servisebi/ალბომები */
+ #servisebi {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    padding: 0 7%;
+    background: url(../img/balaxi.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#servisebi > h1{
+   position: absolute;
+   top: 20px;
+   width: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   font-family: 'mesame';
+   color: rgb(6, 8, 122);
+   font-weight: bold;
+}
+.sercont{
+   position: relative;
+   width: 320px;
+   /* height: 400px; */
+   transition: all .4s;
+   /* margin-right: 20px; */
+}
+.sercont:hover{
+    box-shadow: 6px 6px 15px;
+    transform: translateY(-10px);
+}
+.sercont:not(.lastsercont){
+    margin-right: 20px;
+ }
+.serimg{
+    width: 100%;
+    position: relative;
+}
+.fotograp{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    color: #fff;
+    font-size: 18px;
+    font-family:"mesame";
+    font-weight: bold;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.fotograp i{
+    margin-right: 5px;
+    color: rgb(255, 218, 10);
+}
+.laridan{
+    position: absolute;
+    font-family: 'mesame';
+    font-weight: bold;
+    cursor: default;
+}
+.laridan{ 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: yellowgreen;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    width: 140px;
+    text-align: center;
+    padding:2px 0;
+    border-radius: 2px;
+    bottom: -15px;
+}
+.serimg img{
+    width:100%;
+    height: 170px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.serqvemo{
+    min-height: 220px;
+    cursor: default;
+    background-color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.serqvemo h1{
+    padding-top: 25px;
+    color: #333;
+    font-family: 'meore';
+}
+.serqvemo h2{
+    font-weight: normal;
+    font-size: 18px;
+    font-family: 'meore';
+}
+.sertxt{
+    font-family: 'mesame';
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.serbtn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'pirveli';
+    /* font-weight: bold; */
+    padding: 5px 20px 4px;
+    border-radius: 4px;
+    background-color: rgb(16, 16, 241);
+    border: 2px solid  rgb(16, 16, 241);
+    transition: all .4s;
+}
+.serbtn:hover{
+    background: transparent;
+    color:  rgb(16, 16, 241);
+}
+@media(max-width:857px){
+    #servisebi{
+        flex-direction: column;
+        padding: 60px 0 25px;
+    }
+    #servisebi > h1{
+     font-size: 25px;
+     top: 15px;
+    }
+    .sercont{
+        width: 80%;
+        margin-bottom: 20px;
+        margin-right: 0 !important;
+     }
+     .serimg img{
+        height: 230px;
+     }
+     .sertxt{
+        padding: 0 5px;
+    }
+}   
+@media(max-width:500px){
+    #servisebi{
+        padding: 65px 0 15px;
+    }
+    .serimg img{
+        height: 170px;
+     }
+}
+@media(max-width:360px){
+    .sercont{
+        width: 85%;
+     }
+}
+@media(max-width:330px){
+    #servisebi{
+        padding: 65px 0 10px;
+    }
+    #servisebi > h1{
+     font-size: 21px;
+     top: 17px;
+    }
+}
+
+
+/* end servisebi/ალბომები */
+
+           /* start კონტაქტი */
+#shekveta{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    padding: 2% 7%;
+    background-color: #153e52;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shektxt{
+    flex: 1;
+    padding: 0 15px 0 0;
+}
+.shekwarw{
+    color:orange;
+    font-size: 19px;
+    letter-spacing: 1px;
+    font-family: "mesame";
+    font-weight: bold;
+}
+.shektxt h1{
+    color: white;
+    font-size: 26px;
+    font-family: 'pirveli';
+    margin: 15px 0 20px;
+    line-height: 30px;
+}
+.inshektxt{
+    font-size: 17px;
+    font-family: 'mesame';
+    color: rgb(240, 236, 236);
+    font-weight: bold;
+    text-indent: 10px;
+    margin-bottom: 15px;
+}
+.admin{
+    color: rgb(30, 255, 0);
+    margin-top: 4px;
+    text-indent: 0;
+}
+.sheksia{
+    list-style-type: none;
+    color:rgb(255, 238, 6);
+    font-family: 'mesame';
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+}
+.weshead{
+    margin-bottom: 15px; 
+    color: orange;
+}
+.sheksia li{
+    margin-bottom: 10px;
+}
+.sheksia li::before{
+    content: "";
+    display: inline-block;
+    margin-bottom: 2px;
+    width: 10px;
+    height: 10px;
+    line-height: 30px;
+    background-color: orange;
+    border-radius: 1px;
+    margin-right: 5px;
+}
+.mwvane{
+    color: rgb(142, 230, 11);
+}
+.shekform{
+    flex: 1;
+    padding: 0 15px 0 0;
+}
+.shekform > input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(42, 93, 119);
+    border: 1px solid rgb(29, 78, 102);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-left: 15px;
+    line-height: 40px;
+    color:white;
+    font-weight: bold;
+}
+.sms{
+    width:100%;
+    height: 140px;
+    resize: none;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-top: 5px;
+    color:white;
+    /* font-weight: bold; */
+    font-family: "meore";
+    background-color: rgb(42, 93, 119);
+    border: 1px solid rgb(29, 78, 102);
+
+}
+.shekform select{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(42, 93, 119);
+    border: 1px solid rgb(29, 78, 102);
+    border-radius: 4px;
+    font-size: 18px;
+    padding-left: 15px;
+    line-height: 40px;
+    color:#ccc;
+    font-family: "pirveli";
+}
+.pirobebi{
+    color:#ccc;
+    font-size: 14px;
+    font-family: "meore";
+    font-weight: bold;
+    margin-top: 13px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.pirobebi a{
+    color: #ccc;
+    transition: .4s;
+}
+.pirobebi a:hover{
+    color:rgb(101, 173, 255);
+}
+.pirobebi input{
+    margin-right: 5px;
+}
+.shekbtn{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 8px 0 6px;
+    font-family: "pirveli";
+    font-weight: bold;
+    font-size: 18px;
+    color:#fff;
+    letter-spacing: 1px;
+    background-color: rgb(20, 191, 152);;
+    border: 2px solid rgb(20, 191, 152);;
+    border-radius: 4px;
+    transition: .5s;
+    
+}
+.shekbtn:hover{
+    background-color: transparent;
+    color: rgb(20, 191, 152);;
+}
+
+@media(max-width:867px){
+    #shekveta{
+        flex-direction: column;
+        padding: 6% 6%;
+    }
+    .shektxt{
+        padding: 0;
+    }
+    .shekform{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media(max-width:779px){
+    #shekveta{
+        z-index: 999;
+    }
+}
+@media(max-width:361px){
+    .shekform > input{
+        padding-left: 5px;
+    }
+    .sms{
+        padding-left: 5px;
+    }
+}
+@media(max-width:351px){   
+    .shekform > input::-webkit-input-placeholder{
+        font-size: 15px;
+    }   
+    .shekform > input::-moz-placeholder{
+        font-size: 15px;
+    }   
+    .shekform > input:-ms-input-placeholder{
+        font-size: 15px;
+    }   
+    .shekform > input::-ms-input-placeholder{
+        font-size: 15px;
+    }   
+    .shekform > input::placeholder{
+        font-size: 15px;
+    }   
+}
+
+ /* end კონტაქტი */
+
+
+     /* start მეტი */
+#meti{
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 108px);
+    padding: 2% 7%;
+    background: url(../img/spring.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.metileft{
+    flex: 1;
+    padding: 10px;
+}
+.metileft > h3{
+    color: rgb(68, 67, 67);
+    font-size: 22px;
+    font-family: "pirveli";
+    /* font-weight: bold; */
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+}
+.metiright{
+    flex: 1;
+}
+.metisbtn{ /* mimoxilvis btn */
+    display: block;
+    /* width: 180px; */
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'mesame';
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 2px 4px;
+    border-radius: 4px;
+    background-color: rgb(28, 175, 15);
+    color: white;
+    border: 2px solid  rgb(28, 175, 15);
+    transition: all .4s; 
+  }
+.metisbtn i{
+    float: right;
+    font-size: 20px;
+    margin-left: 3px;
+}
+.metisbtn:hover{
+    background: transparent;
+    color:   rgb(0, 0, 0);
+}  
+     
+     .fbpagecont{
+       position: relative;
+       box-sizing: unset;
+       margin:auto;
+       transform: translateX(5%);
+       width: 70%; 
+       height: auto;
+       border-radius: 14px; 
+       /* border: 3px solid rgba(126, 216, 8, 0.719); */
+       box-shadow: 2px 2px 4px;
+       background-size: cover;
+     }
+     .fbpagewarw{
+         position: absolute;
+         cursor: pointer;
+         width: auto;
+         top: 70%;
+         left: 50%;
+         transform: translateX(-50%);
+         font-size: 20px;
+         font-family: "pirveli";
+         color: white;
+         text-align: center;
+         text-decoration: none;
+         padding: 3px 8px 2px;
+         background-color: rgb(28, 175, 15);
+         border: 2px solid  rgb(28, 175, 15);
+         border-radius: 4px;
+         transition: all .4s; 
+     }
+     .fbpagewarw:hover{
+        background-color: rgb(19, 136, 8);
+        border-color: rgb(19, 136, 8);
+    }  
+      
+     .fbimg{
+         width: 100%;
+         border-radius: 14px; 
+     }
+
+     @media(max-width:1000px){
+        #meti{
+            padding: 2% 2%;
+        }
+    }
+
+@media(max-width:779px){
+    #meti{
+        flex-direction: column;
+        z-index: 999;
+    }
+    .fbpagecont{
+        transform: translateX(0);
+    }
+    .metiright{
+        padding: 40px 0 20px;
+    }
+}
+
+       @media(max-width:460px){
+           .fbpagecont{
+               width: 90%;
+           }
+       }
+       @media(max-width:310px){
+        
+        .metisbtn{
+            font-size: 16px;
+        }
+       }
+       @media(max-width:290px){
+        
+        .fbpagewarw{
+            font-size: 18px;
+        }
+       }
+
+@media(min-width:722px){
+    .metileft{
+        border: 1px solid rgba(126, 216, 8, 0.329);
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px;
+       /* background-color: rgb(255, 187, 0, 0.1); */
+    }
+}
+
+               /* end მეტი */
+
+    /* start footer   */
+footer{
+    width: 100%;
+    padding: 15px 0;
+    background-color: #28a745;
+    text-align: center;
+    
+}
+.footdiv{
+    font-size: 16px;
+    color: rgb(49, 48, 48);
+    font-weight: bold;
+    font-family: "meore";
+}
+.sach{
+    color: rgb(249, 253, 29);
+    cursor: default;
+}
+.footdiv a{
+    color: rgb(255, 255, 255);
+}
+.footdiv a:hover{
+    color: rgba(255, 255, 255, 0.89);
+}
+
+@media(max-width:855px){
+   .footbr{
+       display: block;
+   }
+}
+@media(max-width:505px){
+    /* footer{
+        text-align: left;
+    } */
+    .footbro{
+        display: block;
+    }
+ }
+ @media(max-width:467px){
+    .footbro1{
+        display: block;
+    }
+ }
+    /* end footer */ 
+
+
+.shetyobineba{
+    position: absolute;
+    text-align: center;
+    bottom: 25px;
+    left: 20px;
+    width: 280px;
+    height: 180px;
+    background-color: rgb(7, 184, 36);
+    border-radius: 5px;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 43% 75%, 16% 100%, 20% 75%, 0% 75%);
+}
+.shetyobineba > i{
+    float: right;
+    margin: 4px 5px 4px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .4s;
+}
+.shetyobineba > i:hover{
+    color: rgb(112, 24, 24);
+}
+.shetyobineba > h3{
+    margin: 21px 2px 5px 5px;
+    text-align: center;
+    color: rgb(17, 13, 13);
+    font-family: "mesame";
+    font-weight: bold;
+}
+.shetbtn{
+    display: inline-block;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 6px 5px 4px;
+    font-family: "pirveli";
+    font-weight: bold;
+    font-size: 17px;
+    color:rgb(2, 34, 16);
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 4px;
+    transition: .5s;
+    
+}
+.shetbtn:hover{
+    background-color: transparent;
+}

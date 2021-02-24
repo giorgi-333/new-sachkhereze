@@ -1,0 +1,95 @@
+body{
+    background-color: rgb(254, 255, 177);
+}
+.doc{
+    position: relative;
+    min-height: calc(100vh - 48px);
+}
+.backbtn{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: "meore";
+    color: black;
+    text-decoration: none;
+    padding: 4px 7px 3px;
+    border: 2px solid rgb(7, 187, 7);
+    border-radius: 4px;
+    transition: .6s;
+}
+.backbtn:hover{
+    background-color: rgb(7, 187, 7);
+}
+.post{
+    display: flex;
+    padding: 39px 5px 4px;
+}
+.postimg{
+    margin: 5px;
+    width: 40%;
+    max-width: 400px;
+}
+.inpimg{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+    transition: .4s;
+}
+.inpimg:hover{
+    border-radius: 15px;
+    transform: scale(0.99);
+}
+.txt{
+    padding-left: 10px;
+    width: 100%; 
+}
+.txt h1{
+    text-align: center;
+    font-family: "mesame";
+    font-weight: bold;
+    color: #333;
+}
+.txtintxt{
+    font-size: 17px;
+    font-family: "mesame";
+    font-weight: bold;
+    text-indent: 11px;
+    color: black;
+    line-height: 23px;
+}
+.af{
+    font-weight: bold;
+    color: rgb(2, 2, 153);
+}
+.sheksia{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.sheksia li{
+    color: rgb(12, 10, 10) !important;
+    margin-bottom: 5px !important;
+}
+.mescol{
+    color: rgb(56, 216, 8);
+}
+.fabcol{
+    color: blue;
+}
+footer{
+    clear: both;
+}
+
+@media(max-width:768px){
+    .post{
+        flex-direction: column;
+    }
+    .postimg{
+        width: 100%;
+        margin: auto;
+    }
+    .txt{
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+}
