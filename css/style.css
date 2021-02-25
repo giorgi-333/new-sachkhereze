@@ -351,7 +351,7 @@ nav ul li a:hover:not(.active){
     border-radius: 7px;
     overflow: hidden;
     background-color: rgb(255, 249, 170);
-    box-shadow: 2px 2px 2px rgb(7, 0, 0);
+    box-shadow: 2px 2px 8px rgb(7, 0, 0);
   }
   
   #informacia .conttxt{
@@ -393,22 +393,26 @@ nav ul li a:hover:not(.active){
     top: 0;
     left:0;
     /* background-color: rgb(28, 175, 15); */
-    background-color: #0ecc63; 
+    /* background-color: #0ecc63;  */
+    background: url('https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631__340.jpg') no-repeat center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: .6s;
-    /* transform: translateY(-100%); */
   }
  
   #informacia .incont i{
-    color: #fff;
+    color: white;
     margin-bottom: 5px;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
   }
   #informacia .incont h3{
     margin-top: 3px;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(51, 51, 51, 0.657);
+    letter-spacing: 1px;
     font-family: "meore"; 
     font-weight: bold;
 }
@@ -423,7 +427,7 @@ nav ul li a:hover:not(.active){
     }
   }
    */
-  @media(max-width:1050px){
+  @media(max-width:1100px){
     #informacia{
       grid-template-columns: 1fr 1fr;
       padding: 25px 0;
