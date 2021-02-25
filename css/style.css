@@ -341,7 +341,7 @@ nav ul li a:hover:not(.active){
     font-family: "pirveli"; 
     font-weight: bold;
     color: #fff;
-}
+} 
 #informacia .cont{
     position: relative;
     cursor: pointer;
@@ -392,7 +392,8 @@ nav ul li a:hover:not(.active){
     height: 100%;
     top: 0;
     left:0;
-    background-color: rgb(28, 175, 15);
+    /* background-color: rgb(28, 175, 15); */
+    background-color: #0ecc63; 
     display: flex;
     flex-direction: column;
     justify-content: center;
